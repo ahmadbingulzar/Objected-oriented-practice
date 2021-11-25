@@ -40,9 +40,6 @@ int main()
     d2.showdata();
 }
 
-
-
-
 #include <iostream>
 using namespace std;
 class Prime
@@ -55,7 +52,7 @@ public:
     {
         number[8] = user_number[8];
         cout << "class printing" << endl;
-        for (int i = 0; i <=8; i++)
+        for (int i = 0; i <= 8; i++)
         {
             cout << user_number[i] << endl;
         }

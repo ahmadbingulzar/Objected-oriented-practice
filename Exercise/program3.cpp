@@ -1,52 +1,54 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Time{
+class Time
+{
 
-int hours;
-int minutes;
-int seconds;
+    int hours;
+    int minutes;
+    int seconds;
+
 public:
-Time(): hours(0),minutes(0),seconds(0)
-{
-
-}
-Time(int h, int m,int s){ 
-    hours=h;
-    minutes=m;
-    seconds=s;
-
-}
-void display()
-{
-    cout<<hours<<":"<<minutes<<":"<<seconds<<endl;
-}
-int add_obj(Time  time_1,Time  time_2)
-{
-          seconds = time_1.seconds + time_2.seconds;
-            if( seconds > 59 ){
-                seconds -= 60; 
-                minutes++; 
-            }
-            minutes += time_1.minutes + time_2.minutes;
-            if( minutes > 59 ){
-                minutes -= 60; 
-                hours++; 
-            }
-            hours += time_1.hours + time_2.hours;
-}
-
+    Time() : hours(0), minutes(0), seconds(0)
+    {
+    }
+    Time(int h, int m, int s)
+    {
+        hours = h;
+        minutes = m;
+        seconds = s;
+    }
+    void display()
+    {
+        cout << hours << ":" << minutes << ":" << seconds << endl;
+    }
+    int add_obj(Time time_1, Time time_2)
+    {
+        seconds = time_1.seconds + time_2.seconds;
+        if (seconds > 59)
+        {
+            seconds -= 60;
+            minutes++;
+        }
+        minutes += time_1.minutes + time_2.minutes;
+        if (minutes > 59)
+        {
+            minutes -= 60;
+            hours++;
+        }
+        hours += time_1.hours + time_2.hours;
+    }
 };
 int main()
 {
-    Time obj_1(3,3,3);
-    Time obj_2(2,2,2);
+    Time obj_1(3, 3, 3);
+    Time obj_2(2, 2, 2);
     Time obj_3;
 
-    cout<<"sum of "<<endl;
+    cout << "sum of " << endl;
     obj_1.display();
     obj_2.display();
-    obj_3.add_obj(obj_1,obj_2);
-    cout<<"is = "<<endl;
+    obj_3.add_obj(obj_1, obj_2);
+    cout << "is = " << endl;
     obj_3.display();
     return 0;
 }

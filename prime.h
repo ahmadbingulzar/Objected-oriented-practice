@@ -31,9 +31,9 @@ public:
         }
         return resulting;
     }
-    int * rotate(int arr[8], int swaps)
+    int *rotate(int arr[8], int swaps)
     {
-        int my[8]={};
+        int my[8] = {};
         int n = 9;
         int i;
         for (int j = 1; j <= swaps; j++)
@@ -46,6 +46,6 @@ public:
             for (int i = 0; i < n; i++)
                 cout << number[i] << ' ';
         }
-      return number;
+        return number;
     }
 };

@@ -1,8 +1,9 @@
-   #include<iostream>
-   using namespace std;
-bool prime_check(int lastelement){ 
-       bool flag=true;
-   for (int i = 2; i <= lastelement / 2; i++)
+#include <iostream>
+using namespace std;
+bool prime_check(int lastelement)
+{
+    bool flag = true;
+    for (int i = 2; i <= lastelement / 2; i++)
     {
         if (lastelement % i == 0)
         {
@@ -14,4 +15,4 @@ bool prime_check(int lastelement){
         return true;
     else
         return false;
-   }
+}

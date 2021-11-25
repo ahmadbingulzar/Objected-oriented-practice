@@ -29,22 +29,24 @@ int main()
 {
     toolBooth cars;
     string choice;
-    while(true){ 
-    cout<<"Enter a for paying car and b for non paying car/c for display "<<endl;
-    cin>>choice;
-    if(choice=="a")
+    while (true)
     {
+        cout << "Enter a for paying car and b for non paying car/c for display " << endl;
+        cin >> choice;
+        if (choice == "a")
+        {
             cars.payingCar();
-    }
-    else if(choice=="b")
-    {
-        cars.no_pay_Car();
-    }
-else if(choice=="c")
-{
-   cout<<"Total cars is = ";cars.display();
-}
-else
-cout<<"Enter again"<<endl;
+        }
+        else if (choice == "b")
+        {
+            cars.no_pay_Car();
+        }
+        else if (choice == "c")
+        {
+            cout << "Total cars is = ";
+            cars.display();
+        }
+        else
+            cout << "Enter again" << endl;
     }
 }
